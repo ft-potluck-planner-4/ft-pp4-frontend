@@ -22,10 +22,11 @@ function Header() {
         <Link className="header_link" to="/">
           <span>Future Add Potluck Component</span>
         </Link>
-
         <Link className="header_link" to="/potlucks">
-          <span>Putluck List Component</span>
-
+          <span>Potluck List Component</span>
+        </Link>
+        <Link className="header_link" to="/Foodlist">
+          <span>Food List Component</span>
         </Link>
       </div>
     </nav>
