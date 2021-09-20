@@ -5,7 +5,11 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Header from "./components/Header";
 import PotluckList from "./components/PotluckList";
+
+import FoodList from "./components/FoodList";
+
 import Potluck from "./components/Potluck";
+
 
 function App() {
   const [potlucks, setPotlucks] = useState([
@@ -76,6 +80,9 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
+          <Route path="/FoodList">
+            <FoodList/>
+          </Route>
           <Route path="/potlucks">
             <Header />
             <PotluckList />
