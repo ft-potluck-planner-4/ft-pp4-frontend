@@ -1,0 +1,14 @@
+.potluck {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  border: 1px solid black;
+  min-width: 200px;
+  max-width: 30%;
+  margin: 10px auto;
+  padding: 10px;
+}
+.potluck:hover {
+  border: 3px dashed black;
+}
