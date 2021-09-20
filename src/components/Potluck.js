@@ -1,8 +1,10 @@
 import React from "react";
+import "./Potluck.css";
 
 function Potluck(props) {
-  console.log("props in potluck:", props);
-  const { id, name, date, location, time, foods, guests } = props.potluck;
+  //   console.log("props in potluck:", props);
+  const { name, date, location, time, foods, guests } = props.potluck;
+  //   console.log(id);
   return (
     <div className="potluck">
       <h3>Name: {name}</h3>
