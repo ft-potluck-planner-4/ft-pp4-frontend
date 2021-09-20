@@ -5,12 +5,16 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Header from "./components/Header";
 import PotluckList from "./components/PotluckList";
+import FoodList from "./components/FoodList";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
+          <Route path="/FoodList">
+            <FoodList/>
+          </Route>
           <Route path="/potlucks">
             <Header />
             <PotluckList />

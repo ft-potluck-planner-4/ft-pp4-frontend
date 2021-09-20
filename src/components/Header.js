@@ -18,7 +18,7 @@ function Header() {
           <span>Future Add Potluck Component</span>
         </Link>
         <Link to="/potlucks">
-          <span>Putluck List Component</span>
+          <span>Potluck List Component</span>
         </Link>
       </div>
     </nav>
