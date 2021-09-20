@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axiosWithAuth from "./../utils/axiosWithAuth";
 import Potluck from "./Potluck";
+import { Link } from "react-router-dom";
+import "./PotluckList.css";
 
 function PotluckList() {
   //mocking data we would eventually get back from a backend get request
@@ -84,9 +86,17 @@ function PotluckList() {
 
   return (
     <div className="potlucks">
-      {potlucks.map(potluck => {
+      {potlucks.map((potluck, index) => {
         // console.log(potluck);
-        return <Potluck potluck={potluck} />;
+        return (
+          <Link
+            to={`/potlucks/${potluck.id}`}
+            className="potlucks_link"
+            key={index}
+          >
+            <Potluck potluck={potluck} />
+          </Link>
+        );
       })}
     </div>
   );
