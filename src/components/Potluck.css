@@ -18,3 +18,16 @@
   height: 30vh;
   margin-top: 10px;
 }
+.potluck_guest {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+}
+.potluck_deleteGuest {
+  margin-right: 15px;
+}
+.potluck_deleteGuest:hover {
+  cursor: pointer;
+}

@@ -19,7 +19,15 @@ function Login(props) {
       [e.target.name]: e.target.value
     });
   };
-  const handleSubmit = e => {};
+  const handleSubmit = e => {
+    console.log(
+      "Username: ",
+      loggedUser.username,
+      "Password: ",
+      loggedUser.password
+    );
+    push("/potlucks");
+  };
   //EVENTUAL HANDLE SUBMIT FUNCTION FOR LOGIN?
   // const handleSubmit = e => {
   //   e.preventDefault();
@@ -27,7 +35,7 @@ function Login(props) {
   //     setError("Username and Password are required fields.");
   //   }
   //   axios
-  //     .post(`${/*Eventual POST request to the backend */}`, user)
+  //     .post(`${/*PATH TO BACKEND POST REQUEST FOR USERS */}`, user)
   //     .then(res => {
   //       // console.log(res);
   //       localStorage.setItem("token", res.data.payload);
