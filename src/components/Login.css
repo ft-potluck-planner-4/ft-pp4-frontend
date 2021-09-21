@@ -1,0 +1,13 @@
+form {
+  margin: 0 auto;
+  width: 300px;
+}
+
+input {
+  background-color: #fff;
+  font-size: 21px;
+  height: 30px;
+  width: 300px;
+  padding: 0 8px;
+  color: black;
+}
