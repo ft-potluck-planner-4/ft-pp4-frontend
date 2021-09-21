@@ -34,9 +34,15 @@ function Potluck(props) {
         id: 2,
         name: "Guest 2",
         isAttending: true
+      },
+      {
+        id: 3,
+        name: "Guest 3",
+        isAttending: false
       }
     ]
   });
+  const deleteGuest = () => {};
   const { id, name, image, date, time, location, foods, guests } = potluck;
   return (
     <div className="potluck">
@@ -54,9 +60,18 @@ function Potluck(props) {
       })}
       {guests.map(guest => {
         return (
-          <p>
-            {guest.name} is attending? {guest.isAttending.toString()}
-          </p>
+          <>
+            {guest.isAttending ? (
+              <div className="potluck_guest">
+                <span className="potluck_deleteGuest" onClick={deleteGuest}>
+                  ❌
+                </span>
+                <p>{guest.name}</p>
+              </div>
+            ) : (
+              <p></p>
+            )}
+          </>
         );
       })}
     </div>
