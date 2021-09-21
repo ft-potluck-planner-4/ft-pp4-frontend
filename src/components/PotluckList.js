@@ -9,6 +9,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 function PotluckList(props) {
+
   const { push } = useHistory();
   // console.log(push);
   //mocking data we would eventually get back from a backend get request
@@ -332,7 +333,7 @@ function PotluckList(props) {
                 className="justify-content-center"
                 style={{ width: "100%" }}
               >
-                <Accordion.Item eventKey={potluck.id}>
+                <Accordion.Item eventKey={potluck.id} >
                   <Accordion.Header>Learn More and Join!</Accordion.Header>
                   <Accordion.Body>
                     <p>Date: {potluck.date}</p>
