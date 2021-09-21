@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Route } from "react-router-dom";
+import { Route, useHistory } from "react-router-dom";
 import "./Potluck.css";
 
 function Potluck(props) {
+  const { push } = useHistory();
   //this will eventuall be set to a value given to us by a backend API get request
   const [potluck, setPotluck] = useState({
     id: 1,
@@ -43,6 +44,9 @@ function Potluck(props) {
     ]
   });
   const deleteGuest = () => {};
+  const addGuest = () => {
+    push(`/potlucks/add`);
+  };
   const { id, name, image, date, time, location, foods, guests } = potluck;
   return (
     <div className="potluck">
@@ -58,6 +62,7 @@ function Potluck(props) {
           </p>
         );
       })}
+      <button onClick={addGuest}>Add New Guest</button>
       {guests.map(guest => {
         return (
           <>
