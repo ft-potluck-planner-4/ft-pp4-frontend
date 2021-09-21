@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import {
+  Card, CardBody,
+  CardTitle, Button, Form, FormGroup, Label, Input
+} from 'reactstrap';
 import "./Login.css";
 
 const initialState = {
-  username: "",
+  email: "",
   password: ""
 };
 
@@ -21,8 +25,8 @@ function Login(props) {
   };
   const handleSubmit = e => {
     console.log(
-      "Username: ",
-      loggedUser.username,
+      "Email: ",
+      loggedUser.email,
       "Password: ",
       loggedUser.password
     );
@@ -31,8 +35,8 @@ function Login(props) {
   //EVENTUAL HANDLE SUBMIT FUNCTION FOR LOGIN?
   // const handleSubmit = e => {
   //   e.preventDefault();
-  //   if (logged.username === "" || logged.password === "") {
-  //     setError("Username and Password are required fields.");
+  //   if (logged.email === "" || logged.password === "") {
+  //     setError("Email and Password are required fields.");
   //   }
   //   axios
   //     .post(`${/*PATH TO BACKEND POST REQUEST FOR USERS */}`, user)
@@ -47,33 +51,24 @@ function Login(props) {
   // };
 
   return (
-    <div className="login">
-      <h1>Login Component</h1>
-
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username:
-          <input
-            id="login_username"
-            type="text"
-            name="username"
-            value={loggedUser.username}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Password:
-          <input
-            id="login_password"
-            type="password"
-            name="password"
-            value={loggedUser.password}
-            onChange={handleChange}
-          />
-        </label>
-        <button type="submit">Login</button>
-      </form>
-      <p className="login_error">{error}</p>
+    <div className='login-container'>
+      <Card className='login-card'>
+        <CardBody className='login-body'>
+          <CardTitle tag="h5">LOGIN</CardTitle>
+          <Form className='login-form' onSubmit={handleSubmit}>
+            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+              <Label for="email" className="mr-sm-2">Email</Label>
+              <Input type="email" name="email" id="email" placeholder="email" value={loggedUser.email} onChange={handleChange}/>
+            </FormGroup>
+            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+              <Label for="password" className="mr-sm-2">Password</Label>
+              <Input type="password" name="password" id="password" placeholder="password" value={loggedUser.password} onChange={handleChange}/>
+            </FormGroup>
+            <Button color='secondary' type="submit">Let's Go!</Button>
+          </Form>
+         <p className="login_error">{error}</p>
+        </CardBody>
+      </Card>
     </div>
   );
 }
