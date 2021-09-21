@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Header from "./components/Header";
 import PotluckList from "./components/PotluckList";
+import FoodList from "./components/FoodList";
+import Potluck from "./components/Potluck";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/potlucks">
+          <Route path="/FoodList">
+            <Header />
+            <FoodList />
+          </Route>
+          <Route path="/potlucks/:id">
+            <Header />
+            <Potluck />
+          </Route>
+          <Route exact path="/potlucks">
             <Header />
             <PotluckList />
           </Route>
