@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, useHistory } from "react-router-dom";
 import "./Potluck.css";
-import {Button} from 'reactstrap';
+import { Button } from "reactstrap";
 
 function Potluck(props) {
   const { push } = useHistory();
@@ -18,12 +18,12 @@ function Potluck(props) {
       {
         name: "Potato Salad",
         isPresent: true,
-        owner: "Owners Username1"
+        owner: "Joe"
       },
       {
         name: "Burgers",
         isPresent: true,
-        owner: "Owners Username2"
+        owner: "Bob"
       }
     ],
     guests: [
@@ -45,17 +45,17 @@ function Potluck(props) {
     ]
   });
   const deleteGuest = () => {};
-  const addGuest = () => {
-    push(`/potlucks/add`);
+  const addGuest = item => {
+    push(`/potlucks/${item.id}/addGuest`);
   };
   const { id, name, image, date, time, location, foods, guests } = potluck;
 
   function handleClick(e, item) {
     e.preventDefault();
-    push(`/Foodlist`);
+    push(`/potlucks/${item.id}/foods`);
   }
   return (
-    <div className='potluck-container'>
+    <div className="potluck-container">
       <div className="potluck">
         <img src={image} alt={name} className="potluck_image" />
         <h3>Name: {name}</h3>
@@ -65,12 +65,13 @@ function Potluck(props) {
         {foods.map(food => {
           return (
             <p>
-              {food.owner} will bring {food.name}
+              {food.owner}'s bringing {food.name}
             </p>
           );
         })}
-        <Button onClick={e => handleClick(e, potluck)}>Items Needed</Button><br/>
-        <Button onClick={addGuest}>Add New Guest</Button>
+        <Button onClick={e => handleClick(e, potluck)}>Items Needed</Button>
+        <br />
+        <Button onClick={e => addGuest(potluck)}>Add New Guest</Button>
         {guests.map(guest => {
           return (
             <>
