@@ -19,8 +19,8 @@ function Header() {
         <Link className="header_link" to="/signup">
           <span>Sign up</span>
         </Link>
-        <Link className="header_link" to="/">
-          <span>Future Add Potluck Component</span>
+        <Link className="header_link" to="/addPotluck">
+          <span>Add Potluck</span>
         </Link>
         <Link className="header_link" to="/potlucks">
           <span>Potluck List Component</span>

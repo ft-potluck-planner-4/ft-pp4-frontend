@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import PotluckList from "./components/PotluckList";
 import FoodList from "./components/FoodList";
 import Potluck from "./components/Potluck";
+import AddPotluck from './components/AddPotluck';
 
 function App() {
   return (
@@ -33,9 +34,9 @@ function App() {
             <Header />
             <Login />
           </Route>
-          <Route path="/">
+          <Route path="/addPotluck">
             <Header />
-            <Login />
+            <AddPotluck />
           </Route>
         </Switch>
       </div>
