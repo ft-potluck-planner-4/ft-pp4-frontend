@@ -1,13 +1,21 @@
 .add-container{
-    border: 3px solid red;
-    padding: 20px;
+    background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
+    height: 94vh;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 93vh;
 }
 .add-form{
-    border: 5px solid pink;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 60%;
+    height: 80%;
+    border-radius: 6%;
+    padding: 25px;
+    background-color:white;
+    
 }
