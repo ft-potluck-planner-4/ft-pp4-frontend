@@ -325,22 +325,21 @@ function PotluckList(props) {
     <div className="d-flex flex-wrap justify-content-around align-items-center">
       {potlucks.map(potluck => {
         return (
-          <Card style={{ width: "50rem", margin: "3rem" }}>
+          <Card style={{ width: "40rem", margin: "3rem" }}>
             <Card.Img variant="top" src={potluck.image} alt="pic goes here" />
             <Card.Body>
               <Card.Title>{potluck.name}</Card.Title>
               <Accordion
                 className="justify-content-center"
-                style={{ width: "100%" }}
-              >
+                style={{ width: "100%" }}>
                 <Accordion.Item eventKey={potluck.id} >
                   <Accordion.Header>Learn More and Join!</Accordion.Header>
                   <Accordion.Body>
                     <p>Date: {potluck.date}</p>
                     <p>Location: {potluck.location}</p>
-                    <button onClick={e => handleClick(e, potluck)}>
+                    <Button onClick={e => handleClick(e, potluck)}>
                       Join Potluck
-                    </button>
+                    </Button>
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
@@ -353,3 +352,4 @@ function PotluckList(props) {
 }
 
 export default PotluckList;
+              
