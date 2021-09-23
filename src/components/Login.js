@@ -66,7 +66,7 @@ function Login(props) {
             </FormGroup>
             <Button color='secondary' type="submit">Let's Go!</Button>
           </Form>
-         <p className="login_error">{error}</p>
+        <p className="login_error">{error}</p>
         </CardBody>
       </Card>
     </div>
