@@ -7,14 +7,23 @@ import Header from "./components/Header";
 import PotluckList from "./components/PotluckList";
 import FoodList from "./components/FoodList";
 import Potluck from "./components/Potluck";
-import AddPotluck from './components/AddPotluck';
+import AddPotluck from "./components/AddPotluck";
+import AddNewGuest from "./components/AddNewGuest";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/FoodList">
+          <Route path="/addPotluck">
+            <Header />
+            <AddPotluck />
+          </Route>
+          <Route path="/potlucks/:id/addGuest">
+            <Header />
+            <AddNewGuest />
+          </Route>
+          <Route path="/potlucks/:id/foods">
             <Header />
             <FoodList />
           </Route>
@@ -34,9 +43,9 @@ function App() {
             <Header />
             <Login />
           </Route>
-          <Route path="/addPotluck">
+          <Route path="/">
             <Header />
-            <AddPotluck />
+            <Login />
           </Route>
         </Switch>
       </div>
