@@ -8,9 +8,16 @@
     justify-content: center;
     align-items: center;
 }
-.foodlist-form{
+.listform-container{
     height: 60%;
     width: 40%;
     background-color: white;
     border-radius: 6%;
+}
+.list-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5%;
+    height: 100%;
 }

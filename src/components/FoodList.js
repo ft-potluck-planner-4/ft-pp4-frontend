@@ -22,12 +22,14 @@ const FoodList = () =>{
 
     return(
         <div className='foodlist-container'>
-            <div className="foodlist-form">
-                <Form>
+            <div className="listform-container">
+                <Form className='list-form'>
+                    <h3>Potluck Items Needed</h3>
                     {FoodsNeeded.map(foodItem =>
-                    <Label> {foodItem}
-                        <Input type='checkbox'></Input>
-                    </Label>
+                    <FormGroup>
+                        <Input type='checkbox'/>{''}
+                        <Label className='list-label'> {foodItem}</Label>
+                    </FormGroup>
                     )}
                     <Button type='submit'>Commit Foods</Button>
                 </Form>
