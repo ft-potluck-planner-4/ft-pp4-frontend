@@ -49,6 +49,11 @@ function Potluck(props) {
     push(`/potlucks/add`);
   };
   const { id, name, image, date, time, location, foods, guests } = potluck;
+
+  function handleClick(e, item) {
+    e.preventDefault();
+    push(`/Foodlist`);
+  }
   return (
     <div className='potluck-container'>
       <div className="potluck">
@@ -64,6 +69,7 @@ function Potluck(props) {
             </p>
           );
         })}
+        <Button onClick={e => handleClick(e, potluck)}>Items Needed</Button><br/>
         <Button onClick={addGuest}>Add New Guest</Button>
         {guests.map(guest => {
           return (

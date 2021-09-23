@@ -25,9 +25,9 @@ function Header() {
         <Link className="header_link" to="/potlucks">
           <span>Current Potlucks</span>
         </Link>
-        <Link className="header_link" to="/Foodlist">
-          <span>Food List Component</span>
-        </Link>
+        {/* <Link className="header_link" to="/Foodlist">
+          <span>Food List</span>
+        </Link> */}
       </div>
     </nav>
   );
