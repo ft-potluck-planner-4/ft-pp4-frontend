@@ -20,14 +20,14 @@ function Header() {
           <span>Sign up</span>
         </Link>
         <Link className="header_link" to="/addPotluck">
-          <span>Add Potluck</span>
+          <span>Create a Potluck</span>
         </Link>
         <Link className="header_link" to="/potlucks">
-          <span>Potluck List Component</span>
+          <span>Current Potlucks</span>
         </Link>
-        <Link className="header_link" to="/Foodlist">
-          <span>Food List Component</span>
-        </Link>
+        {/* <Link className="header_link" to="/Foodlist">
+          <span>Food List</span>
+        </Link> */}
       </div>
     </nav>
   );

@@ -1,3 +1,13 @@
+.potluck-container{
+  background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
+  height: 94vh;
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .potluck {
   display: flex;
   flex-direction: column;
@@ -10,6 +20,7 @@
   width: 50%;
   margin: 20px auto;
   padding: 20px;
+  background-color: white;
 }
 
 .potluck_image {

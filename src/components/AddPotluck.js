@@ -15,6 +15,8 @@ const initialState = {
     organizer: ''
 }
 
+// not really sure how to create a list of items needed from the organizers side
+
 export default function AddPotluck(){
     const [newPotluck, setNewPotluck] = useState(initialState);
     const [error, setError] = useState('');

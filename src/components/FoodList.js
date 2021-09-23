@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import { Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import './FoodList.css';
 
 const FoodsNeeded = [
     "bananas",
@@ -19,16 +21,18 @@ const FoodList = () =>{
     const [foodsUserBrings, setFoodsUserBrings] = useState([]);
 
     return(
-        <div>
-            <div className="FoodsUserBringsForm">
-                <form>
+        <div className='foodlist-container'>
+            <div className="listform-container">
+                <Form className='list-form'>
+                    <h3>Potluck Items Needed</h3>
                     {FoodsNeeded.map(foodItem =>
-                    <label> {foodItem}
-                        <input type='checkbox'></input>
-                    </label>
+                    <FormGroup>
+                        <Input type='checkbox'/>{''}
+                        <Label className='list-label'> {foodItem}</Label>
+                    </FormGroup>
                     )}
-                    <button type='submit'>Commit Foods</button>
-                </form>
+                    <Button type='submit'>Commit Foods</Button>
+                </Form>
             </div>
         </div>
     )
